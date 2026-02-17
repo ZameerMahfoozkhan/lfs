@@ -704,9 +704,10 @@ h6 {
         height: calc(100vh - 70px);
         background-color: var(--white);
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        /* Changed from center to flex-start */
         justify-content: flex-start;
-        padding-top: 2rem;
+        padding-top: 1rem;
         transition: var(--transition);
         box-shadow: var(--shadow-lg);
         overflow-y: auto;
@@ -722,7 +723,8 @@ h6 {
 
     .dropdown {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        /* Changed from center to left */
         display: block;
     }
 
@@ -748,7 +750,26 @@ h6 {
     .nav-link {
         display: block;
         width: 100%;
-        padding: 1rem;
+        padding: 1rem 2rem;
+        /* Added horizontal padding */
+        text-align: left;
+        /* Ensure left alignment */
+        border-bottom: 1px solid #f0f0f0;
+        /* Separator lines */
+    }
+
+    .dropdown>.nav-link {
+        padding-right: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-content a {
+        padding-left: 3rem;
+        /* Indent dropdown items */
+        background-color: #f9f9f9;
+        text-align: left;
     }
 
     .hero h1 {
