@@ -760,6 +760,8 @@ h6 {
 
     .dropdown>.nav-link {
         padding-right: 1rem;
+        padding-left: 2rem;
+        /* Explicitly set left padding */
         display: flex;
         justify-content: space-between;
         align-items: center;
